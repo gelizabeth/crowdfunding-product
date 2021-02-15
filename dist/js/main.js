@@ -85,7 +85,7 @@ modalSuccess.classList.remove('open');
 body.classList.remove('modal-open');
 main.classList.remove('modal-open');
 header.classList.remove('modal-open');
-window.scrollTo(0,50);
+window.scrollTo(0,0);
 }
 
 //event listeners
