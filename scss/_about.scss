@@ -36,7 +36,8 @@ border-radius: 10px;
             span{
                 color: $dark-gray;
                 height: 100%;
-                vertical-align:super;
+                // vertical-align:super;
+                padding: 0.15rem;
             }
         }
     }

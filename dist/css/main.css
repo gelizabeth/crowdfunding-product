@@ -260,7 +260,7 @@ body {
 .option-left__number span {
   color: #7a7a7a;
   height: 100%;
-  vertical-align: super;
+  padding: 0.15rem;
 }
 
 .modal-open {
@@ -434,6 +434,27 @@ header.modal-open {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+}
+
+.pledges .option.selected .pledge__input input {
+  background-color: white;
+  background-image: url("../img/dollar-sign-solid.svg");
+  background-position: 1rem;
+  background-size: 0.6rem;
+  background-repeat: no-repeat;
+  padding: 1rem;
+  border: 1px solid rgba(77, 76, 76, 0.3);
+  outline: none;
+  border-radius: 50px;
+  width: 45%;
+  margin-right: 2rem;
+  padding: 1rem;
+  padding-left: 2rem;
+  font-weight: 500;
+}
+
+.pledges .option.selected .pledge__input .btn-primary {
+  width: 45%;
 }
 
 .pledges .option .pledge__input {

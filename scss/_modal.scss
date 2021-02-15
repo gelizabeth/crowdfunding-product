@@ -1,14 +1,16 @@
-
-.modal-open{
+.modal-open {
     opacity: 0.8;
 }
-body.modal-open{
+
+body.modal-open {
     background: rgba($color: #4d4c4c, $alpha: .8);
     opacity: 1;
 }
-header.modal-open{
+
+header.modal-open {
     opacity: 0.4;
 }
+
 .modal {
     position: absolute;
     top: 6rem;
@@ -16,6 +18,7 @@ header.modal-open{
     display: none;
     z-index: 4;
 }
+
 .success {
     display: none;
     flex-direction: column;
@@ -38,43 +41,49 @@ header.modal-open{
         margin: 0.5rem;
     }
 }
+
 .pledges {
     display: none;
     opacity: 0;
     flex-direction: column;
     @include transition-ease;
-    &.open{
+
+    &.open {
         display: flex;
         opacity: 1;
     }
-    p{
+
+    p {
         margin-top: 1rem;
     }
-    &-btn__close{
+
+    &-btn__close {
         width: 20px;
         height: 20px;
         position: absolute;
         right: 1.5rem;
-    top: 2.5rem;
-    &::before{
-        content: '';
-        position: absolute;
-        top: -8px;
-        width: 15px;
-        height: 3px;
-        background: $dark-gray;
-        transform: rotate(45deg) translate(6px, 5px);
-    }
-    &::after{
-        content: '';
-        position: absolute;
-        top: 8px;
-        width: 15px;
-        height: 3px;
-        background: $dark-gray;
-        transform: rotate(-45deg) translate(6px, -5px);
-        
-    }
+        top: 2.5rem;
+
+        &::before {
+            content: '';
+            position: absolute;
+            top: -8px;
+            width: 15px;
+            height: 3px;
+            background: $dark-gray;
+            transform: rotate(45deg) translate(6px, 5px);
+        }
+
+        &::after {
+            content: '';
+            position: absolute;
+            top: 8px;
+            width: 15px;
+            height: 3px;
+            background: $dark-gray;
+            transform: rotate(-45deg) translate(6px, -5px);
+
+        }
     }
 
     .option {
@@ -82,19 +91,21 @@ header.modal-open{
             display: flex;
             flex-direction: row;
             align-items: center;
-            
+
 
             h3,
             p {
                 margin-left: 1rem;
             }
-            p{
+
+            p {
                 margin-top: unset;
             }
-            
+
 
             input {
                 cursor: pointer;
+
                 &:after {
                     width: 20px;
                     height: 20px;
@@ -107,10 +118,11 @@ header.modal-open{
                     display: inline-block;
                     visibility: visible;
                     border: 1px solid #d1d3d1;
-                    
+
                 }
-                &:checked{
-                    &:after{
+
+                &:checked {
+                    &:after {
                         width: 20px;
                         height: 20px;
                         border-radius: 20px;
@@ -124,17 +136,43 @@ header.modal-open{
                         border: 1px solid $moderate-cyan;
                     }
                 }
-                
+
             }
         }
-        &.selected{
-            border:2px solid $moderate-cyan;
-            .pledge__input{
+
+        &.selected {
+            border: 2px solid $moderate-cyan;
+
+            .pledge__input {
                 display: flex;
                 flex-direction: column;
+
+                input {
+                    background-color: white;
+                    background-image: url('../img/dollar-sign-solid.svg');
+                    background-position: 1rem;
+                    background-size: 0.6rem;
+                    background-repeat: no-repeat;
+                    padding: 1rem;
+                    
+                    border: 1px solid rgba($color: #4d4c4c, $alpha: .3);
+                    outline: none;
+                    border-radius: 50px;
+                    width: 45%;
+                    margin-right: 2rem;
+                    padding: 1rem;
+                    padding-left: 2rem;
+                    font-weight: 500;
+
+                }
+
+                .btn-primary {
+                    width: 45%;
+                }
             }
         }
-        .pledge__input{
+
+        .pledge__input {
             display: none;
         }
     }

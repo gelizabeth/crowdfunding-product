@@ -8,10 +8,13 @@ const main = document.querySelector('main');
 const header = document.querySelector('header');
 const backBtn = document.querySelector('#back-btn');
 const modalOptions = document.querySelector('.pledges');
+const modalSuccess = document.querySelector('.success');
 const closeModalBtn = document.querySelector('#close-modal-btn');
+const gotItBtn = document.querySelector('.got-it-btn');
 
 const options = document.querySelectorAll('.modal-option');
 const radioButtons = document.querySelectorAll('input[type="radio"]');
+const continueButtons = document.querySelectorAll('.continue-btn');
 
 let showMenu = false;
 
@@ -66,11 +69,32 @@ const onCheck = (e) => {
     
 }
 
+//continueBtn clicked 
+const continueClick = () =>{
+//here would go some post request
+console.log('continue clicked')
+modalOptions.classList.remove('open');
+modalSuccess.classList.add('open');
+
+}
+//close modal succes 
+const closeSuccess = () => {
+
+modalSuccess.classList.remove('open');
+body.classList.remove('modal-open');
+main.classList.remove('modal-open');
+header.classList.remove('modal-open');
+}
+
 //event listeners
 menuBtn.addEventListener('click', toggleMenu);
 backBtn.addEventListener('click', openOptionsModal);
 closeModalBtn.addEventListener('click', closeOptionsModal);
+gotItBtn.addEventListener('click', closeSuccess)
 
 radioButtons.forEach(radio => {
     radio.addEventListener('change', onCheck);
-})
+});
+continueButtons.forEach(continueBtn => {
+    continueBtn.addEventListener('click', continueClick);
+});
