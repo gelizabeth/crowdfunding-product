@@ -1,0 +1,141 @@
+
+.modal-open{
+    opacity: 0.8;
+}
+body.modal-open{
+    background: rgba($color: #4d4c4c, $alpha: .8);
+    opacity: 1;
+}
+header.modal-open{
+    opacity: 0.4;
+}
+.modal {
+    position: absolute;
+    top: 6rem;
+    right: 7.5%;
+    display: none;
+    z-index: 4;
+}
+.success {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    &.open {
+        display: flex;
+    }
+
+    h2,
+    p {
+        margin: 1rem;
+        text-align: center;
+    }
+
+    .btn-primary {
+        padding: 1.5rem;
+        width: 50%;
+        margin: 0.5rem;
+    }
+}
+.pledges {
+    display: none;
+    opacity: 0;
+    flex-direction: column;
+    @include transition-ease;
+    &.open{
+        display: flex;
+        opacity: 1;
+    }
+    p{
+        margin-top: 1rem;
+    }
+    &-btn__close{
+        width: 20px;
+        height: 20px;
+        position: absolute;
+        right: 1.5rem;
+    top: 2.5rem;
+    &::before{
+        content: '';
+        position: absolute;
+        top: -8px;
+        width: 15px;
+        height: 3px;
+        background: $dark-gray;
+        transform: rotate(45deg) translate(6px, 5px);
+    }
+    &::after{
+        content: '';
+        position: absolute;
+        top: 8px;
+        width: 15px;
+        height: 3px;
+        background: $dark-gray;
+        transform: rotate(-45deg) translate(6px, -5px);
+        
+    }
+    }
+
+    .option {
+        &-header {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            
+
+            h3,
+            p {
+                margin-left: 1rem;
+            }
+            p{
+                margin-top: unset;
+            }
+            
+
+            input {
+                cursor: pointer;
+                &:after {
+                    width: 20px;
+                    height: 20px;
+                    border-radius: 20px;
+                    top: -5px;
+                    left: -3px;
+                    position: relative;
+                    background-color: #fff;
+                    content: '';
+                    display: inline-block;
+                    visibility: visible;
+                    border: 1px solid #d1d3d1;
+                    
+                }
+                &:checked{
+                    &:after{
+                        width: 20px;
+                        height: 20px;
+                        border-radius: 20px;
+                        top: -5px;
+                        left: -3px;
+                        position: relative;
+                        background: radial-gradient(circle at center, $moderate-cyan 40%, #fff 40% 100%);
+                        content: '';
+                        display: inline-block;
+                        visibility: visible;
+                        border: 1px solid $moderate-cyan;
+                    }
+                }
+                
+            }
+        }
+        &.selected{
+            border:2px solid $moderate-cyan;
+            .pledge__input{
+                display: flex;
+                flex-direction: column;
+            }
+        }
+        .pledge__input{
+            display: none;
+        }
+    }
+}

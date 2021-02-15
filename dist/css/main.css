@@ -10,6 +10,8 @@ body {
   font-size: 16px;
   font-family: 'Commissioner', sans-serif;
   background-color: rgba(122, 122, 122, 0.01);
+  -webkit-transition: all 0.4s ease-in;
+  transition: all 0.4s ease-in;
 }
 
 .menu-btn {
@@ -224,7 +226,7 @@ body {
   margin: 1.5rem auto;
 }
 
-.about .option {
+.option {
   width: 100%;
   margin: 1.5rem auto;
   padding: 2rem 1.5rem;
@@ -233,32 +235,209 @@ body {
   border-radius: 10px;
 }
 
-.about .option .btn-primary {
+.option .btn-primary {
   padding: 1rem;
   width: 80%;
 }
 
-.about .option-header p {
+.option-header p {
   color: #3cb4ac;
   margin: 0;
   font-weight: 500;
 }
 
-.about .option-left {
+.option-left {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   margin: 1rem 0;
 }
 
-.about .option-left strong {
+.option-left strong {
   font-size: 1.8rem;
 }
 
-.about .option-left__number span {
+.option-left__number span {
   color: #7a7a7a;
   height: 100%;
   vertical-align: super;
+}
+
+.modal-open {
+  opacity: 0.8;
+}
+
+body.modal-open {
+  background: rgba(77, 76, 76, 0.8);
+  opacity: 1;
+}
+
+header.modal-open {
+  opacity: 0.4;
+}
+
+.modal {
+  position: absolute;
+  top: 6rem;
+  right: 7.5%;
+  display: none;
+  z-index: 4;
+}
+
+.success {
+  display: none;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.success.open {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.success h2,
+.success p {
+  margin: 1rem;
+  text-align: center;
+}
+
+.success .btn-primary {
+  padding: 1.5rem;
+  width: 50%;
+  margin: 0.5rem;
+}
+
+.pledges {
+  display: none;
+  opacity: 0;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-transition: all 0.4s ease-in;
+  transition: all 0.4s ease-in;
+}
+
+.pledges.open {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  opacity: 1;
+}
+
+.pledges p {
+  margin-top: 1rem;
+}
+
+.pledges-btn__close {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  right: 1.5rem;
+  top: 2.5rem;
+}
+
+.pledges-btn__close::before {
+  content: '';
+  position: absolute;
+  top: -8px;
+  width: 15px;
+  height: 3px;
+  background: #7a7a7a;
+  -webkit-transform: rotate(45deg) translate(6px, 5px);
+          transform: rotate(45deg) translate(6px, 5px);
+}
+
+.pledges-btn__close::after {
+  content: '';
+  position: absolute;
+  top: 8px;
+  width: 15px;
+  height: 3px;
+  background: #7a7a7a;
+  -webkit-transform: rotate(-45deg) translate(6px, -5px);
+          transform: rotate(-45deg) translate(6px, -5px);
+}
+
+.pledges .option-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.pledges .option-header h3,
+.pledges .option-header p {
+  margin-left: 1rem;
+}
+
+.pledges .option-header p {
+  margin-top: unset;
+}
+
+.pledges .option-header input {
+  cursor: pointer;
+}
+
+.pledges .option-header input:after {
+  width: 20px;
+  height: 20px;
+  border-radius: 20px;
+  top: -5px;
+  left: -3px;
+  position: relative;
+  background-color: #fff;
+  content: '';
+  display: inline-block;
+  visibility: visible;
+  border: 1px solid #d1d3d1;
+}
+
+.pledges .option-header input:checked:after {
+  width: 20px;
+  height: 20px;
+  border-radius: 20px;
+  top: -5px;
+  left: -3px;
+  position: relative;
+  background: radial-gradient(circle at center, #3cb4ac 40%, #fff 40% 100%);
+  content: '';
+  display: inline-block;
+  visibility: visible;
+  border: 1px solid #3cb4ac;
+}
+
+.pledges .option.selected {
+  border: 2px solid #3cb4ac;
+}
+
+.pledges .option.selected .pledge__input {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.pledges .option .pledge__input {
+  display: none;
 }
 
 .attribution {
