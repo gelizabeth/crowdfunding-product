@@ -1,0 +1,42 @@
+.about{
+    h2{
+        margin: 0.8rem auto;
+    }
+    p{
+        margin: 1.5rem auto;
+    }
+    .option{
+        width: 100%;
+    margin: 1.5rem auto;
+    padding: 2rem 1.5rem;
+    background-color: #fff;
+    border: 1px solid rgba($dark-gray, 0.2);
+    border-radius: 10px;
+    .btn-primary{
+        padding: 1rem;
+        width: 80%;
+    }
+        &-header{
+            p{
+                color: $moderate-cyan;
+                margin: 0;
+                font-weight: 500;
+            }
+        }
+        &-left{
+            display: flex;
+            
+            margin: 1rem 0;
+            strong{
+                font-size: 1.8rem;
+            }
+            &__number{
+                span{
+                    color: $dark-gray;
+                    height: 100%;
+                    vertical-align:super;
+                }
+            }
+        }
+    }
+}

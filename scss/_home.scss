@@ -1,0 +1,16 @@
+.home{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;  
+    padding-top: 3rem;
+    h1, p{
+        width: 100%;
+        margin: 0.5rem auto;
+    } 
+    &__img{
+        position: absolute;
+        top: -10%;
+    }
+
+}
