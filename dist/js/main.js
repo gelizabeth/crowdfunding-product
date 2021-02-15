@@ -75,6 +75,7 @@ const continueClick = () =>{
 console.log('continue clicked')
 modalOptions.classList.remove('open');
 modalSuccess.classList.add('open');
+window.scrollTo(0,100);
 
 }
 //close modal succes 
@@ -84,6 +85,7 @@ modalSuccess.classList.remove('open');
 body.classList.remove('modal-open');
 main.classList.remove('modal-open');
 header.classList.remove('modal-open');
+window.scrollTo(0,50);
 }
 
 //event listeners

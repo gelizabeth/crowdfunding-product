@@ -15,6 +15,9 @@ $dark-gray: hsl(0, 0%, 48%);
     margin: 0;
     padding: 0;
 }
+html {
+    scroll-behavior: smooth;
+  }
 body{
     font-size: 16px;
     font-family: 'Commissioner', sans-serif;
