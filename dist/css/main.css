@@ -239,6 +239,30 @@ body {
   border-radius: 10px;
 }
 
+.option-disabled h3 {
+  color: #7b7b7b;
+}
+
+.option-disabled p {
+  color: rgba(122, 122, 122, 0.5);
+}
+
+.option-disabled .option-header p {
+  color: rgba(60, 180, 172, 0.5);
+}
+
+.option-disabled .option-left {
+  color: rgba(122, 122, 122, 0.5);
+}
+
+.option-disabled .option-left span {
+  color: rgba(122, 122, 122, 0.2);
+}
+
+.option-disabled .btn-primary {
+  background-color: rgba(60, 180, 172, 0.4);
+}
+
 .option .btn-primary {
   padding: 1rem;
   width: 80%;
