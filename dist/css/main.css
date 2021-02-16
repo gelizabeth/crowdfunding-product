@@ -156,6 +156,36 @@ body {
   border-top: 1px solid rgba(122, 122, 122, 0.1);
 }
 
+@media screen and (min-width: 1024px) {
+  .menu-btn {
+    display: none;
+  }
+  .nav {
+    visibility: visible;
+    opacity: 1;
+    position: relative;
+    width: unset;
+  }
+  .nav .menu-nav {
+    opacity: 1;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    background: transparent;
+    width: unset;
+    height: unset;
+    margin: 0;
+  }
+  .nav .menu-nav__item {
+    border: none;
+  }
+  .nav .menu-nav__item a {
+    color: #fff;
+    font-weight: 300;
+  }
+}
+
 .home {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -222,6 +252,26 @@ body {
   background-color: #3cb4ac;
 }
 
+@media screen and (min-width: 1024px) {
+  .statistics {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .statistics hr {
+    width: 1px;
+    height: 50px;
+    display: inline-block;
+    border-left: 1px rgba(122, 122, 122, 0.3) solid;
+  }
+}
+
 .about h2 {
   margin: 0.8rem auto;
 }
@@ -260,7 +310,11 @@ body {
 }
 
 .option-disabled .btn-primary {
-  background-color: rgba(60, 180, 172, 0.4);
+  background-color: rgba(122, 122, 122, 0.4);
+}
+
+.option-disabled .btn-primary:hover {
+  background-color: rgba(122, 122, 122, 0.4);
 }
 
 .option .btn-primary {
@@ -291,12 +345,48 @@ body {
   padding: 0.15rem;
 }
 
+@media screen and (min-width: 1024px) {
+  .option {
+    padding: 2rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .option p {
+    width: 100%;
+  }
+  .option-header {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .option-header p {
+    width: unset;
+  }
+  .option-left {
+    width: 70%;
+  }
+  .option .btn-primary {
+    width: 30%;
+    padding-top: 1.4rem;
+  }
+}
+
 .modal-open {
   opacity: 0.8;
 }
 
 body.modal-open {
-  background: rgba(77, 76, 76, 0.8);
+  background: rgba(158, 157, 157, 0.8);
   opacity: 1;
 }
 
@@ -489,6 +579,65 @@ header.modal-open {
   display: none;
 }
 
+@media screen and (min-width: 1024px) {
+  .modal {
+    right: 25%;
+  }
+  .success {
+    top: 15rem;
+    width: 40%;
+    right: 30%;
+    padding: 5rem;
+  }
+  .success h2 {
+    font-size: 1.6rem;
+    margin: 1rem;
+  }
+  .success p {
+    margin: 1rem;
+    font-size: 1.3rem;
+    line-height: 2rem;
+  }
+  .pledges .option-header div {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    width: 95%;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
+  .pledges .option.selected .pledge__input {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .pledges .option.selected .pledge__input input:focus {
+    border-color: #3cb4ac;
+  }
+  .pledges .option.selected .pledge__input .btn-primary {
+    padding: 1rem;
+  }
+}
+
 .attribution {
   font-size: 11px;
   text-align: center;
@@ -585,5 +734,98 @@ p {
 
 .btn-bookmark span {
   display: none;
+}
+
+.btn-bookmark.true {
+  background-color: #147b74;
+  color: #fff;
+}
+
+@media screen and (min-width: 1024px) {
+  header {
+    height: 40vh;
+    background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.3)), to(transparent)), url("../img/image-hero-desktop.jpg");
+    background: linear-gradient(rgba(0, 0, 0, 0.3), transparent), url("../img/image-hero-desktop.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  header .header-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 80%;
+    margin: 0 auto;
+    padding: 2.5rem 0;
+  }
+  header .header-container .logo {
+    position: relative;
+    top: 0;
+    left: 0;
+  }
+  section {
+    width: 50%;
+    top: -10rem;
+    padding: 2rem 3rem;
+  }
+  h1 {
+    font-size: 1.3rem;
+  }
+  p {
+    font-size: .9rem;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .btn-primary {
+    width: 40%;
+  }
+  .btn-bookmark {
+    width: 35%;
+    padding: unset;
+    background-color: #ededed;
+    color: #7a7a7a;
+    font-weight: 500;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .btn-bookmark i {
+    padding: 1.2rem 1.4rem;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #ededed;
+    border-radius: 50px;
+    -webkit-transition: all 0.4s ease-in;
+    transition: all 0.4s ease-in;
+  }
+  .btn-bookmark span {
+    display: inline-block;
+    margin: auto;
+  }
+  .btn-bookmark.true {
+    background-color: #ededed;
+  }
+  .btn-bookmark.true span {
+    color: #147b74;
+  }
+  .btn-bookmark.true i {
+    background-color: #147b74;
+    color: #fff;
+  }
 }
 /*# sourceMappingURL=main.css.map */

@@ -1,67 +1,115 @@
-.about{
-    h2{
+.about {
+    h2 {
         margin: 0.8rem auto;
     }
-    p{
+
+    p {
         margin: 1.5rem auto;
     }
 
 }
-.option{
+
+.option {
     width: 100%;
-margin: 1.5rem auto;
-padding: 2rem 1.5rem;
-background-color: #fff;
-border: 1px solid rgba($dark-gray, 0.2);
-border-radius: 10px;
-&-disabled{
-    
-    h3{
-        color: lighten($dark-gray, 0.2);
-    }
-    p{
-        color: rgba($dark-gray, 0.5);
-    }
-    .option-header{
-        p{
-            color: rgba($moderate-cyan, 0.5);
+    margin: 1.5rem auto;
+    padding: 2rem 1.5rem;
+    background-color: #fff;
+    border: 1px solid rgba($dark-gray, 0.2);
+    border-radius: 10px;
+
+    &-disabled {
+
+        h3 {
+            color: lighten($dark-gray, 0.2);
+        }
+
+        p {
+            color: rgba($dark-gray, 0.5);
+        }
+
+        .option-header {
+            p {
+                color: rgba($moderate-cyan, 0.5);
+            }
+        }
+
+        .option-left {
+            color: rgba($dark-gray, 0.5);
+
+            span {
+                color: rgba($dark-gray, 0.2);
+            }
+        }
+
+        .btn-primary {
+            background-color: rgba($dark-gray, 0.4);
+            &:hover{
+                background-color: rgba($dark-gray, 0.4);
+            }
         }
     }
-    .option-left{
-        color: rgba($dark-gray, 0.5);
-        span{
-            color:rgba($dark-gray, 0.2);
-        }
+
+    .btn-primary {
+        padding: 1rem;
+        width: 80%;
     }
-    .btn-primary{
-       background-color:rgba($moderate-cyan, 0.4) ;
-    }
-}
-.btn-primary{
-    padding: 1rem;
-    width: 80%;
-}
-    &-header{
-        p{
+
+    &-header {
+        p {
             color: $moderate-cyan;
             margin: 0;
             font-weight: 500;
         }
     }
-    &-left{
+
+    &-left {
         display: flex;
-        
+
         margin: 1rem 0;
-        strong{
+
+        strong {
             font-size: 1.8rem;
         }
-        &__number{
-            span{
+
+        &__number {
+            span {
                 color: $dark-gray;
                 height: 100%;
                 // vertical-align:super;
                 padding: 0.15rem;
             }
+        }
+    }
+}
+
+@include media-lg {
+    .option {
+        padding: 2rem;
+        display: flex;
+        flex-wrap: wrap;
+
+        p {
+            width: 100%;
+        }
+
+        &-header {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            p {
+                width: unset;
+            }
+        }
+
+        &-left {
+            width: 70%;
+        }
+
+        .btn-primary {
+            width: 30%;
+            padding-top: 1.4rem;
         }
     }
 }

@@ -34,3 +34,16 @@
     }
 
 }
+@include media-lg{
+    .statistics{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        hr{
+            width: 1px;
+            height: 50px;
+            display: inline-block;
+            border-left: 1px rgba($dark-gray, 0.3) solid ;
+        }
+    }
+}

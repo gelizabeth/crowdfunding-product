@@ -107,3 +107,31 @@
         }
     }
 }
+@include media-lg{
+    .menu-btn{
+        display: none;
+    }
+    .nav{
+        visibility: visible;
+        opacity: 1;
+        position: relative;
+        width: unset;
+        
+        .menu-nav{
+            opacity: 1;
+            flex-direction: row;
+            background: transparent;
+            width: unset;
+            height: unset;
+            margin: 0;
+            
+            &__item{
+                border:none;
+                a{
+                    color: #fff;
+                    font-weight: 300;
+                }
+            }
+        }
+    }
+}

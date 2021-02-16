@@ -11,12 +11,14 @@ const modalOptions = document.querySelector('.pledges');
 const modalSuccess = document.querySelector('.success');
 const closeModalBtn = document.querySelector('#close-modal-btn');
 const gotItBtn = document.querySelector('.got-it-btn');
+const bookmarkBtn = document.querySelector('.btn-bookmark');
 
 const options = document.querySelectorAll('.modal-option');
 const radioButtons = document.querySelectorAll('input[type="radio"]');
 const continueButtons = document.querySelectorAll('.continue-btn');
 
 let showMenu = false;
+let isBookmarked = false;
 
 //toggling hambuerger
 const toggleMenu = () => {
@@ -88,11 +90,20 @@ header.classList.remove('modal-open');
 window.scrollTo(0,0);
 }
 
+//bookmark button
+const toggleBookmark = () =>{
+    if(isBookmarked){
+        bookmarkBtn.classList.remove('true');
+        
+    } else bookmarkBtn.classList.add('true');
+    isBookmarked = !isBookmarked;
+}
 //event listeners
 menuBtn.addEventListener('click', toggleMenu);
 backBtn.addEventListener('click', openOptionsModal);
 closeModalBtn.addEventListener('click', closeOptionsModal);
-gotItBtn.addEventListener('click', closeSuccess)
+gotItBtn.addEventListener('click', closeSuccess);
+bookmarkBtn.addEventListener('click', toggleBookmark);
 
 radioButtons.forEach(radio => {
     radio.addEventListener('change', onCheck);
