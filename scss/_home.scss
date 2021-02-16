@@ -12,5 +12,11 @@
         position: absolute;
         top: -10%;
     }
-
+}
+@include media-lg{
+ .home{
+     h1,p{
+         margin: 0.8rem auto;
+     }
+ }
 }

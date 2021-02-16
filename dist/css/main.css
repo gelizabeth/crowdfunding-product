@@ -211,6 +211,12 @@ body {
   top: -10%;
 }
 
+@media screen and (min-width: 1024px) {
+  .home h1, .home p {
+    margin: 0.8rem auto;
+  }
+}
+
 .statistics {
   text-align: center;
 }
@@ -743,7 +749,7 @@ p {
 
 @media screen and (min-width: 1024px) {
   header {
-    height: 40vh;
+    height: 50vh;
     background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.3)), to(transparent)), url("../img/image-hero-desktop.jpg");
     background: linear-gradient(rgba(0, 0, 0, 0.3), transparent), url("../img/image-hero-desktop.jpg");
     background-repeat: no-repeat;
@@ -770,14 +776,23 @@ p {
   }
   section {
     width: 50%;
-    top: -10rem;
+    top: -8rem;
     padding: 2rem 3rem;
   }
   h1 {
+    font-size: 1.8rem;
+  }
+  h2 {
+    font-size: 1.5rem;
+  }
+  h3 {
     font-size: 1.3rem;
   }
   p {
-    font-size: .9rem;
+    font-size: 1rem;
+  }
+  .btn {
+    padding: 1rem;
   }
 }
 
